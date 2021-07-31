@@ -115,52 +115,6 @@ async def on_raw_reaction_remove(payload):
 
 
 
-# #prefixes
-# @client.event
-# async def on_guild_join( guild):
-# 	with open('json/prefixes.json','r') as f:
-# 		prefixes = json.load(f)
-	
-# 	prefixes[str(guild.id)] = '.'
-
-# 	with open('json/prefixes.json', 'w') as f:
-# 		json.dump(prefixes, f, indent = 4)
-
-
-
-# @client.event
-# async def on_guild_remove(guild):
-# 	with open('json/prefixes.json','r') as f:
-# 		prefixes = json.load(f)
-
-# 	prefixes.pop(str(guild.id))
-
-# 	with open('json/prefixes.json', 'w') as f:
-# 		json.dump(prefixes, f, indent = 4)
-
-
-# @client.command()
-# async def change_prefix(self, ctx, prefix):
-# 	with open('json/prefixes.json','r') as f:
-# 		prefixes = json.load(f)
-
-# 	prefixes[str(ctx.guild.id)] = prefix
-
-# 	with open('json/prefixes.json', 'w') as f:
-# 		json.dump(prefixes, f, indent = 4)
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 #run the bot
 
