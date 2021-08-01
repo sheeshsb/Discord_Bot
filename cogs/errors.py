@@ -16,7 +16,10 @@ class errors(commands.Cog):
 		elif isinstance(error, commands.BadArgument):
 			await ctx.send(':x: Improper Arguments Provided.')
 		else:
-		 print(error)
+			raise error
+
+
+
 
 
 

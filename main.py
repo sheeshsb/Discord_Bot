@@ -43,14 +43,13 @@ async def ping(ctx):
 
 #ping ends
 
+# client.remove_command('help')
 
-#clear
-@client.command()
-@commands.has_permissions(manage_messages = True)
-async def clear(ctx, amount =5):
-	await ctx.channel.purge(limit=amount+1)
-	await ctx.send(f':white_check_mark: {amount} messages deleted!', delete_after=3)
-#clear ends
+# @client.command()
+# async def help(ctx):
+# 	await ctx.send('buildin')
+
+
 
 
 
@@ -104,12 +103,12 @@ async def on_raw_reaction_remove(payload):
 
 	with open('json/reactrole.json') as react_file:
 
-			data =  json.load(react_file)
-			for x in data:
-				if x['emoji'] == payload.emoji.name and x['message_id'] == payload.message_id:
-					role = discord.utils.get(client.get_guild(payload.guild_id).roles, id = x['role_id'])
+		data =  json.load(react_file)
+		for x in data:
+			if x['emoji'] == payload.emoji.name and x['message_id'] == payload.message_id:
+				role = discord.utils.get(client.get_guild(payload.guild_id).roles, id = x['role_id'])
 
-					await client.get_guild(payload.guild_id).get_member(payload.user_id).remove_roles(role)
+				await client.get_guild(payload.guild_id).get_member(payload.user_id).remove_roles(role)
 
 				
 #reaction role for all ends

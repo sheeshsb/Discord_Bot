@@ -31,6 +31,11 @@ class moderation(commands.Cog):
 				await ctx.send(f'Unbanned {user.mention}')
 				return
 
+	@commands.command()
+	@commands.has_permissions(manage_messages = True)
+	async def clear(self, ctx, amount =5):
+		await ctx.channel.purge(limit=amount+1)
+		await ctx.send(f':white_check_mark: {amount} messages deleted!', delete_after=3)
 
 
 
