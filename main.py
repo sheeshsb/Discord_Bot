@@ -125,9 +125,6 @@ for filename in os.listdir('./cogs'):
 
 
 
-
-
-
 keep_alive()
 client.run(os.environ['TOKEN'])
 
