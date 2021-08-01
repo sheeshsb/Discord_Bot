@@ -49,6 +49,7 @@ async def ping(ctx):
 @commands.has_permissions(manage_messages = True)
 async def clear(ctx, amount =5):
 	await ctx.channel.purge(limit=amount+1)
+	await ctx.send(f':white_check_mark: {amount} messages deleted!', delete_after=3)
 #clear ends
 
 

@@ -32,7 +32,7 @@ class prefixes(commands.Cog):
 
 
 
-	@commands.command()
+	@commands.command(aliases=['cp'])
 	@commands.has_permissions(administrator = True)
 	async def change_prefix(self, ctx, prefix):
 		with open('json/prefixes.json','r') as f:
@@ -42,7 +42,7 @@ class prefixes(commands.Cog):
 
 		with open('json/prefixes.json', 'w') as f:
 			json.dump(prefixes, f, indent = 4)
-		await ctx.send(f'The prefix for this server has been changed to {prefix}')
+		await ctx.send(f':white_check_mark: The prefix for this server has been changed to {prefix}')
 
 
 
