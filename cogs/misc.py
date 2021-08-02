@@ -14,6 +14,10 @@ class misc(commands.Cog):
 		avatar_embed = discord.Embed(title = f"{member.name}'s Avatar", color = discord.Color.green())
 		avatar_embed.set_image(url = member_avatar)
 		await ctx.send(embed = avatar_embed)
+		
+	@commands.command()
+	async def ping(self, ctx):
+		await ctx.send(f'pong! latency: {round(self.client.latency*1000)}ms')
 
 
 

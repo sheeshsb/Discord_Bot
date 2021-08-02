@@ -2,19 +2,7 @@
     {
         "role_name": "test",
         "role_id": 871103704831524934,
-        "emoji": "\ud83d\udc4d",
-        "message_id": 871452583686963231
-    },
-    {
-        "role_name": "new role",
-        "role_id": 871089087388483584,
-        "emoji": "\ud83d\udc4d",
-        "message_id": 871456217518706780
-    },
-    {
-        "role_name": "new role",
-        "role_id": 871089087388483584,
-        "emoji": "\ud83d\udc4d",
-        "message_id": 871456793279221782
+        "emoji": "\u274c",
+        "message_id": 871824817760899152
     }
 ]
