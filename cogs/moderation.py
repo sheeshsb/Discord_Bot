@@ -1,7 +1,7 @@
 import discord
 from discord.ext import commands
 
-class moderation(commands.Cog):
+class MODERATION(commands.Cog):
 	def __init__(self,client):
 		self.client = client
 	
@@ -41,5 +41,5 @@ class moderation(commands.Cog):
 
 
 def setup(client):
-	client.add_cog(moderation(client))
+	client.add_cog(MODERATION(client))
 

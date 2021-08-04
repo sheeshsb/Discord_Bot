@@ -3,7 +3,7 @@ from discord.ext import commands
 import json
 
 
-class role_react(commands.Cog):
+class REACTION_ROLES(commands.Cog):
 	def __init__(self,client):
 		self.client = client
 
@@ -70,4 +70,4 @@ class role_react(commands.Cog):
 
 
 def setup(client):
-	client.add_cog(role_react(client))
+	client.add_cog(REACTION_ROLES(client))

@@ -3,14 +3,14 @@ from discord.ext import commands
 from googleapiclient.discovery import build
 import random
 
-class images(commands.Cog):
+class IMAGE_SEARCH(commands.Cog):
 	def __init__(self, client):
 		self.client = client
 
 
 
-	@commands.command(aliases=["img"])
-	async def search(self, ctx, *, search):
+	@commands.command(aliases=["search"])
+	async def img(self, ctx, *, search):
 			api_key = "AIzaSyDHvTXtnHflihoKBiBrEP0mCcj1zDsfhGY"
 			ran = random.randint(0, 9)
 			resource = build("customsearch", "v1", developerKey=api_key).cse()
@@ -32,7 +32,7 @@ class images(commands.Cog):
 
 
 def setup(client):
-	client.add_cog(images(client))
+	client.add_cog(IMAGE_SEARCH(client))
 
 
 

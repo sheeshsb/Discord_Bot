@@ -24,6 +24,7 @@ async def on_ready():
 
 
 
+
 #load and unload cogs
 # @client.command()
 # async def load(ctx,extension):

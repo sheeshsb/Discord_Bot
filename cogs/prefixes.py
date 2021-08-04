@@ -2,7 +2,7 @@ import discord
 from discord.ext import commands
 import json
 
-class prefixes(commands.Cog):
+class SERVER_PREFIX(commands.Cog):
 	def __init__(self,client):
 		self.client = client
 
@@ -53,4 +53,4 @@ class prefixes(commands.Cog):
 
 
 def setup(client):
-	client.add_cog(prefixes(client))
+	client.add_cog(SERVER_PREFIX(client))

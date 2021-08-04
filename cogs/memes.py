@@ -4,7 +4,7 @@ import random
 import aiohttp
 
 
-class memes(commands.Cog):
+class MEMES(commands.Cog):
 	def __init__(self,client):
 		self.client = client
 
@@ -23,4 +23,4 @@ class memes(commands.Cog):
 
 
 def setup(client):
-	client.add_cog(memes(client))
+	client.add_cog(MEMES(client))

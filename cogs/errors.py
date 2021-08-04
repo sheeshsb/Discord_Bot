@@ -1,7 +1,7 @@
 import discord
 from discord.ext import commands
 
-class errors(commands.Cog):
+class ERRORS(commands.Cog):
 	def __init__(self,client):
 		self.client = client
 
@@ -24,4 +24,4 @@ class errors(commands.Cog):
 
 
 def setup(client):
-	client.add_cog(errors(client))
+	client.add_cog(ERRORS(client))
