@@ -20,6 +20,7 @@ class images(commands.Cog):
 			url = result["items"][ran]["link"]
 			embed1 = discord.Embed(title=f"Here Is Your Image ({search.title()})")
 			embed1.set_image(url=url)
+			embed1.set_footer(text = f'Image requested by {ctx.author}')
 			await ctx.send(embed=embed1)
 
 

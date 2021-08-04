@@ -25,13 +25,13 @@ async def on_ready():
 
 
 #load and unload cogs
-@client.command()
-async def load(ctx,extension):
-	client.load.extension(f'cogs.{extensions}')
+# @client.command()
+# async def load(ctx,extension):
+# 	client.load.extension(f'cogs.{extensions}')
 
-@client.command()
-async def unload(ctx,extension):
-	client.unload.extension(f'cogs.{extensions}')
+# @client.command()
+# async def unload(ctx,extension):
+# 	client.unload.extension(f'cogs.{extensions}')
 	
 
 #load and unload ends
