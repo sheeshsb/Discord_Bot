@@ -19,7 +19,7 @@ client = commands.Bot(command_prefix = get_prefix, intents=discord.Intents.all()
 @client.event
 async def on_ready():
 	print('We have logged in as {0.user}'.format(client))
-	await client.change_presence(status=discord.Status.idle, activity = discord.Game('Somewhere Only We Know'))
+	await client.change_presence(status=discord.Status.idle, activity = discord.Game('.help'))
 #setup ends
 
 

@@ -23,10 +23,7 @@ wow_gifs = ['https://media.giphy.com/media/vKHKDIdvxvN7vTAEOM/giphy.gif','https:
 
 bored_gifs = ['https://media.giphy.com/media/l2JhpjWPccQhsAMfu/giphy.gif','https://media.giphy.com/media/ZgqJGwh2tLj5C/giphy.gif','https://media.giphy.com/media/dYQh2AcRNN6Jq/giphy.gif','https://media.giphy.com/media/NWg7M1VlT101W/giphy.gif','https://media.giphy.com/media/dT7LBdAZP1Rh6/giphy.gif','https://media.giphy.com/media/hSFGpAAuz3REzMXrkv/giphy.gif','https://media.giphy.com/media/ARH12W5IVAbni/giphy.gif','https://media.giphy.com/media/l378AEZceMwWboAQE/giphy.gif','https://media.giphy.com/media/tCSw9mQpVnAvS/giphy.gif','https://media.giphy.com/media/3o7qDGam0NCE46jja0/giphy.gif']
 
-#partner_hug
-#'https://media.giphy.com/media/U4LhzzpfTP7NZ4UlmH/giphy.gif'
-
-
+lol_gifs = ['https://media2.giphy.com/media/KiaU2EUyxjQB2/giphy.gif',   'https://media0.giphy.com/media/3DQb8TMtt28cYbwXYh/giphy.gif',' https://media1.giphy.com/media/JsmYvzaW07DgcOC0s4/giphy.gif','https://media1.giphy.com/media/3otPoyTuloHl96jfm8/giphy.gif',' https://media3.giphy.com/media/yt9DTQeflOUA8/giphy.gif',' https://media0.giphy.com/media/dYge3ULm4IMwSargt2/giphy.gif',' https://media3.giphy.com/media/3o7TKs8jzdYOJxCkko/giphy.gif',' https://media3.giphy.com/media/H3dsXYs4sNW3eyea58/giphy.gif',' https://media2.giphy.com/media/xTiTnyZqw34r1jU8QU/giphy.gif',' https://media1.giphy.com/media/26BGGeHgHXOrgQSty/giphy.gif']
 #list dump ends
 
 
@@ -67,6 +64,12 @@ class GIFS(commands.Cog):
 	async def bored(self,ctx):
 		emb = discord.Embed(title =f"{ctx.author.display_name} is like:",color =random.choice(colors))
 		emb.set_image(url = random.choice(bored_gifs))
+		await ctx.send(embed = emb)
+
+	@commands.command()
+	async def lol(self,ctx):
+		emb = discord.Embed(title =f"{ctx.author.display_name} is like:",color =random.choice(colors))
+		emb.set_image(url = random.choice(lol_gifs))
 		await ctx.send(embed = emb)
 
 

@@ -9,15 +9,17 @@ hug_gifs = ['https://media.giphy.com/media/U4LhzzpfTP7NZ4UlmH/giphy.gif','https:
 
 slap_gifs = ['https://media.giphy.com/media/10DRaO76k9sgHC/giphy.gif','https://media.giphy.com/media/Zau0yrl17uzdK/giphy.gif','https://media.giphy.com/media/xUNd9HZq1itMkiK652/giphy.gif','https://media.giphy.com/media/Gf3AUz3eBNbTW/giphy.gif','https://media.giphy.com/media/Qv7WFppXtkqkM/giphy.gif','https://media.giphy.com/media/LSc9OoFCKcVlLYYb3d/giphy.gif','https://media.giphy.com/media/WR38ZOQlzRowS6OmrR/giphy.gif']
 
+poke_gifs = [' https://media0.giphy.com/media/Vfie0DJryAde8/giphy.gif',' https://media3.giphy.com/media/aZSMD7CpgU4Za/giphy.gif',' https://media4.giphy.com/media/xUA7aYTOA4PEhCz5OE/giphy.gif',' https://media3.giphy.com/media/pWd3gD577gOqs/giphy.gif','https://i.pinimg.com/originals/b4/95/fb/b495fb19f4b9a1b04f48297b676c497b.gif','https://media.giphy.com/media/FdinyvXRa8zekBkcdK/giphy.gif','https://media.giphy.com/media/6ITiRKIryP3MI/giphy.gif']
 
-class PARTNER_GIFS(commands.Cog):
+
+class ACTION_GIFS(commands.Cog):
 	def __init__(self,client):
 		self.client = client
 
 	@commands.command()
 	async def hug(self,ctx,member: discord.Member = None):
 		if member == None:
-			await ctx.send('Who do you wanna hug ? <3')
+			await ctx.send('Who do you wanna hug ? Mention em! <3')
 
 		else:
 		
@@ -25,23 +27,34 @@ class PARTNER_GIFS(commands.Cog):
 			emb.set_image(url = random.choice(hug_gifs))
 			await ctx.send(embed = emb)
 
-	
-		@commands.command()
-		async def slap(self,ctx,member: discord.Member = None):
-			if member == None:
-				await ctx.send('Who deserves a slap?')
+	@commands.command()
+	async def slap(self,ctx,member: discord.Member = None):
+		if member == None:
+			await ctx.send('Who deserves a slap? Mention em!')
+		else:
+			emb = discord.Embed(title =f"{ctx.author.display_name} slaps {member.display_name}",color =random.choice(colors))
+			emb.set_image(url = random.choice(slap_gifs))
+			await ctx.send(embed = emb)
 
-			else:
-			
-				emb = discord.Embed(title =f"{ctx.author.display_name} slaps {member.display_name}",color =random.choice(colors))
-				emb.set_image(url = random.choice(slap_gifs))
-				await ctx.send(embed = emb)
+
+	@commands.command()
+	async def poke(self, ctx, member: discord.Member = None):
+		if member == None:
+			await ctx.send('Poke Who? Mention em!')
+		else:
+			emb = discord.Embed(title=f"{ctx.author.display_name} is poking {member.display_name}!", color = random.choice(colors))
+			emb.set_image(url = random.choice(poke_gifs))
+			await ctx.send(embed = emb)
+		
+
+	
+
 
 
 
 
 def setup(client):
-	client.add_cog(PARTNER_GIFS(client))
+	client.add_cog(ACTION_GIFS(client))
 
 
 

@@ -19,6 +19,7 @@ class MISC(commands.Cog):
 	async def ping(self, ctx):
 		await ctx.send(f'pong! latency: {round(self.client.latency*1000)}ms')
 
+	
 
 
 
